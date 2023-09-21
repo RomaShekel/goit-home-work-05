@@ -434,7 +434,90 @@
        </li>
        </ul>
        </div>
+
+       <div class="footer-input-and-bottom-div">
+        <form class="footer-form">
+        <label class="footer-label" for="subscribe_email">Subscribe</label>
+        <input class="footer-input" type="email" name="subscribe_email" id="subscribe_email" placeholder="E-mail" required>
+       
+        <button type="submit" class="subscribe-botton">Subscribe
+            <svg class="subscribe-botton-icon" width="24" height="24">
+                <use href="./images/icon/icons.svg#icon-subscribe"></use>
+            </svg>
+        </button>
+        </form>
+       </div>
+
        </div>
     </footer>
+
+    <!------------------MODAL WINDOW----------------->
+    <div class="backdrop">
+    <div class="modal">
+        <button class="close-btn" >
+            <svg class="close-icon-ellipse">
+                <use href="./images/icon/icons.svg#icon-ellipse"></use>
+            </svg> 
+            <svg class="close-icon" widht="8" height="8">
+                <use href="./images/icon/icons.svg#icon-close"></use>
+            </svg>
+        </button>
+            <p class="modal-text">Leave your contacts and we will call you back</p>
+
+            <form class="modal-form">
+            <div class="input-div">
+
+                <div class="label-and-input-div">
+                    <label class="modal-label" for="user_name">Name</label>
+                   <div class="input-and-icon-div">
+                    <input class="modal-input" type="text" name="user_name" id="user_name" pattern="[a-z A-Z]+" required />
+                    <svg class="modal-icon icon-person" widht="18" height="18">
+                        <use href="./images/icon/icons.svg#icon-person"></use>
+                    </svg>
+                   </div> 
+                </div>
+
+                <div class="label-and-input-div">
+                    <label class="modal-label" for="user_tel">Fone</label>
+                   <div class="input-and-icon-div">
+                    <input class="modal-input" type="tell" name="user_tel" id="user_tel" pattern="[0-9]+" required />
+                    <svg class="modal-icon  icon-phone" widht="18" height="24">
+                        <use href="./images/icon/icons.svg#icon-phone"></use>
+                    </svg>
+                   </div>
+                </div>
+
+                <div class="label-and-input-div">
+                    <label class="modal-label" for="user_email">Email</label>
+                   <div class="input-and-icon-div">
+                    <input class="modal-input" type="email" name="user_email" id="user_email" required />
+                    <svg class="modal-icon icon-email" widht="18" height="24">
+                        <use href="./images/icon/icons.svg#icon-email"></use>
+                    </svg>
+                   </div>
+                </div>
+
+                <div class="textarea-div">
+                    <label class="modal-label textarea-label" for="textarea" >Comment</label>
+                    <textarea class="modal-textarea" name="textarea" id="textarea" placeholder="Text input"></textarea>
+                </div>
+                </div>
+
+                <div class="checkbox-div">
+                    <input class="checkbox-input visually-hidden" type="checkbox" name="user_privacy" id="user_privacy" value="true" required/>
+                    <label class="modal-label checkbox-label" for="user_privacy">
+                        <span class="checkbox-span">
+                            <svg class="icon-checkbox-agree" width="16" heigth="16">
+                                <use href="./images/icon/icons.svg#icon-checkbox-agree"></use>
+                            </svg>
+                        </span>
+                        I accept the terms and conditions of the&nbsp<a class="privacy-policy-link" href="">Privacy Policy</a>
+                    </label>
+                </div>
+                <button class="reviev-form-submit-button" type="submit"><p class="reviev-form-submit-button-text">Send</p></button>
+            </div>
+            </form>
+        </div>
+    </div>
 </body>
 </html>
