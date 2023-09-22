@@ -514,6 +514,12 @@ header nav {
     margin-left: 80px;
 }
 
+.footer-form {
+    display: flex;
+    gap: 24px;
+    justify-content: center;
+}
+
 .footer-subscribe-text {
     margin-right: 200px;
     margin-bottom: 16px;
@@ -535,11 +541,10 @@ header nav {
     letter-spacing: 0.04em;
     width: 264px;
     height: 40px;
-    margin-right: 21px;
     border-radius: 4px;
     border: 1px solid var(--WHITE, #FFF);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    background: var(--NAVY-BLUE, #2E2F42);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    background-color: transparent;
     padding-left: 16px;
     transition: border 250ms linear;
 }
@@ -560,20 +565,23 @@ header nav {
 }
 
 .subscribe-botton {
+    min-width: 165px;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Roboto;
+    margin-left: 22px;
     color: var(--WHITE, #FFF);
-    text-align: center;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.04em;
-    display: inline-flex;
+    cursor: pointer;
     padding: 8px 24px;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
     border: none;
     border-radius: 4px;
-    background: var(--IRIS, #4D5AE5);
+    background-color: #4D5AE5;
     transition: background-color 250ms linear;
 }
 
@@ -584,6 +592,7 @@ header nav {
 
 .subscribe-botton-icon {
     fill: #fff;
+    margin-left: 16px;
 }
 
 /*=====================MODAL WINDOW=================*/
