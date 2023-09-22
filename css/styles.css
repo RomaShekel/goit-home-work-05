@@ -573,6 +573,7 @@ header nav {
     font-family: Roboto;
     margin-left: 22px;
     color: var(--WHITE, #FFF);
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
     font-weight: 500;
     line-height: 1.5;
@@ -610,7 +611,7 @@ header nav {
     visibility: hidden;
     pointer-events: none;
 
-    transition: opacity 250ms linear, visibility 250ms linear;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-open {
@@ -630,17 +631,10 @@ header nav {
     border-radius: 4px;
     background-color: #FCFCFC;
     padding: 72px 24px 24px 24px;
-
-}
-
-.input-div {
-    display: flex;
-    width: 360px;
-    height: 336px;
-    margin-bottom: 16px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
+    
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    min-height: 584px;
+    box-shadow:  0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);;
 }
 
 .modal-text {
@@ -655,7 +649,7 @@ header nav {
 }
 
 .modal-label {
-    display: inline-block;
+    display: block;
     color: var(--LIGHT-SLATE, #8E8F99);
     font-size: 12px;
     font-weight: 400;
@@ -670,18 +664,22 @@ header nav {
     border-radius: 4px;
     border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     margin: 0;
-    padding: 0 0 0 38px;
-    transition: border 250ms linear;
+    padding-left: 38px;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .label-and-input-div {
     width: 360px;
     height: 58px;
+    margin-bottom: 8px;
+    position: relative;
 }
 
 .modal-input:focus {
     border: 1px solid var(--IRIS, #4D5AE5);
-    outline: transparent;
+    fill: rgba(77, 90, 229, 1);
 }
 
 .modal-input:focus + .modal-icon {
@@ -692,30 +690,39 @@ header nav {
     position: absolute;
     top: 24px;
     right: 24px;
-    border: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     width: 24px;
     height: 24px;
     cursor: pointer;
     padding: 0;
     line-height: 0;
-    background-color: rgba(0, 0, 0, 0);
-    transition: fill 250ms linear;
+    background-color: #e7e9fc; 
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    background-color: #404bbf;
+    border: none;
 }
 
 .close-btn:hover .close-icon,
 .close-btn:focus .close-icon {
-    fill:rgba(255, 255, 255, 1)
+    fill: #ffffff;
 }
 
-.close-btn:hover .close-icon-ellipse,
-.close-btn:focus .close-icon-ellipse {
-    fill: var(--OCEAN, #404BBF);
-    stroke: rgba(0, 0, 0, 0);
+.textarea-div {
+    margin-bottom: 16px;
 }
 
 .modal-textarea {
-    width: 360px;
+    width: 100%;
     height: 120px;
     padding: 8px 16px;
     border-radius: 4px;
@@ -726,7 +733,9 @@ header nav {
     line-height: 1.67;
     letter-spacing: 0.04em;
     resize: none;
-    transition: border 250ms linear;
+    background-color: transparent;
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-textarea::placeholder {
@@ -734,13 +743,13 @@ header nav {
 }
 
 .modal-textarea:focus {
-    outline: transparent;
-    border: 1px solid var(--IRIS, #4D5AE5); 
+    border-color: 1px solid var(--IRIS, #4D5AE5); 
 }
 
 .close-icon {
     width: 8px;
     height: 8px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 
@@ -750,8 +759,7 @@ header nav {
     top: 50%;
     left: 16px;
     transform: translateY(-50%);
-    transition: fill 250ms linear;
-
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-and-icon-div {
@@ -772,19 +780,6 @@ header nav {
 
 .privacy-policy-link {
     color: var(--IRIS, #4D5AE5);
-}
-
-.close-icon-ellipse {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
-    z-index: -1;
-    fill: var(--CORNFLOWER, #E7E9FC);
-    stroke-width: 1px;
-    stroke: rgba(0, 0, 0, 0.10);
-    border: none;
 }
 
 .checkbox-span {

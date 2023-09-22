@@ -456,10 +456,7 @@
     <!------------------MODAL WINDOW----------------->
     <div class="backdrop is-open">
     <div class="modal">
-        <button class="close-btn" >
-            <svg class="close-icon-ellipse">
-                <use href="./images/icon/icons.svg#icon-ellipse"></use>
-            </svg> 
+        <button class="close-btn" type="button">
             <svg class="close-icon" widht="8" height="8">
                 <use href="./images/icon/icons.svg#icon-close"></use>
             </svg>
@@ -467,12 +464,11 @@
             <p class="modal-text">Leave your contacts and we will call you back</p>
 
             <form class="modal-form">
-            <div class="input-div">
 
                 <div class="label-and-input-div">
-                    <label class="modal-label" for="user_name">Name</label>
+                    <label class="modal-label" for="user-name">Name</label>
                    <div class="input-and-icon-div">
-                    <input class="modal-input" type="text" name="user-name" id="user_name" pattern="[a-z A-Z]+" required />
+                    <input class="modal-input" type="text" name="user-name" id="user-name" pattern="[a-z A-Z]+" required />
                     <svg class="modal-icon icon-person" widht="18" height="18">
                         <use href="./images/icon/icons.svg#icon-person"></use>
                     </svg>
@@ -480,9 +476,9 @@
                 </div>
 
                 <div class="label-and-input-div">
-                    <label class="modal-label" for="user_tel">Fone</label>
+                    <label class="modal-label" for="user-tel">Fone</label>
                    <div class="input-and-icon-div">
-                    <input class="modal-input" type="tell" name="user-tel" id="user_tel" pattern="[0-9]+" required />
+                    <input class="modal-input" type="tell" name="user-tel" id="user-tel" pattern="[0-9]+" required />
                     <svg class="modal-icon  icon-phone" widht="18" height="24">
                         <use href="./images/icon/icons.svg#icon-phone"></use>
                     </svg>
@@ -490,9 +486,9 @@
                 </div>
 
                 <div class="label-and-input-div">
-                    <label class="modal-label" for="user_email">Email</label>
+                    <label class="modal-label" for="user-email">Email</label>
                    <div class="input-and-icon-div">
-                    <input class="modal-input" type="email" name="user-email" id="user_email" required />
+                    <input class="modal-input" type="email" name="user-email" id="user-email" required />
                     <svg class="modal-icon icon-email" widht="18" height="24">
                         <use href="./images/icon/icons.svg#icon-email"></use>
                     </svg>
@@ -506,7 +502,7 @@
                 </div>
 
                 <div class="checkbox-div">
-                    <input class="checkbox-input visually-hidden" type="checkbox" name="user_privacy" id="user_privacy" value="true" required/>
+                    <input class="checkbox-input visually-hidden" type="checkbox" name="user-privacy" id="user-privacy" value="true" required/>
                     <label class="modal-label checkbox-label" for="user_privacy">
                         <span class="checkbox-span">
                             <svg class="icon-checkbox-agree" width="16" heigth="16">
@@ -517,7 +513,6 @@
                     </label>
                 </div>
                 <button class="reviev-form-submit-button" type="submit"><p class="reviev-form-submit-button-text">Send</p></button>
-            </div>
             </form>
         </div>
     </div>
