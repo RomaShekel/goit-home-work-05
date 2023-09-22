@@ -730,7 +730,7 @@ header nav {
     color: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
     font-size: 12px;
     font-weight: 400;
-    line-height: 1.67;
+    line-height: 1.17; 
     letter-spacing: 0.04em;
     resize: none;
     background-color: transparent;
@@ -743,7 +743,7 @@ header nav {
 }
 
 .modal-textarea:focus {
-    border-color: 1px solid var(--IRIS, #4D5AE5); 
+    border-color: #4D5AE5;  
 }
 
 .close-icon {
@@ -787,11 +787,15 @@ header nav {
     justify-content: center;
     align-items: center;
     width: 16px;
+    fill: transparent;
     height: 16px;
-    border: 1px solid var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
+    border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     cursor: pointer;
     margin-right: 8px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-checkbox-agree {
@@ -802,8 +806,9 @@ header nav {
 }
 
 .checkbox-input:checked + .checkbox-label > .checkbox-span {
-    fill: #404bbf;
+    background-color: #404bbf;
     border: none;
+    fill: #F4F4FD;
 }
 
 .checkbox-input:focus + .checkbox-label > .checkbox-span {
@@ -813,10 +818,19 @@ header nav {
 .checkbox-div {
     height: 16px;
     width: 345px;
+    margin-bottom: 24px;
 }
 
 .reviev-form-submit-button  {
+    min-width: 169px;
+    height: 56px;;
     display: block;
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: var(--WHITE, #FFF);
     margin-top: 24px;
     margin-left: auto;
     margin-right: auto;
@@ -826,7 +840,7 @@ header nav {
     background: var(--IRIS, #4D5AE5);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     cursor: pointer;
-    transition: background-color 250ms linear;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1)
 }
 
 .reviev-form-submit-button:hover, 
