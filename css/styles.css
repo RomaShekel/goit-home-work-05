@@ -768,9 +768,6 @@ header nav {
 
 .checkbox-label {
     margin: 0;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
     color: var(--LIGHT-SLATE, #8E8F99);
     font-size: 12px;
     font-weight: 400;
